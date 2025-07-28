@@ -27,31 +27,31 @@ export const ProductList = ({ title, products, onBack }: ProductListProps) => {
   };
 
   return (
-    <div className="min-h-screen bg-stone-200 p-6">
+    <div className="min-h-screen bg-app-bg p-6">
       <div className="max-w-md mx-auto">
         {/* Header */}
         <div className="flex items-center mb-8">
           <button 
             onClick={onBack}
-            className="text-black text-lg mr-4 hover:opacity-70"
+            className="text-text-primary text-lg mr-4 hover:opacity-70"
           >
             ←
           </button>
-          <h1 className="text-2xl font-bold text-black">SKU Rápido</h1>
+          <h1 className="text-2xl font-bold text-text-primary">SKU Rápido</h1>
         </div>
 
         {/* Category Circle */}
-        <Card className="w-80 h-80 rounded-full bg-white shadow-lg flex flex-col items-center justify-center mx-auto mb-8 border-none">
-          <h2 className="text-3xl font-bold text-center text-black mb-8">{title}</h2>
+        <Card className="w-80 h-80 rounded-full bg-product-circle shadow-lg flex flex-col items-center justify-center mx-auto mb-8 border-none">
+          <h2 className="text-3xl font-bold text-center text-text-primary mb-8">{title}</h2>
           
           <div className="w-full px-8 space-y-4 max-h-48 overflow-y-auto">
             {products.map((product) => (
               <div key={product.id} className="text-center">
                 {product.brand && (
-                  <div className="text-lg font-semibold text-black mb-2">• {product.brand}</div>
+                  <div className="text-lg font-semibold text-text-primary mb-2">• {product.brand}</div>
                 )}
                 <div className="flex items-center justify-center gap-2">
-                  <span className="text-black font-medium">{product.name}</span>
+                  <span className="text-text-primary font-medium">{product.name}</span>
                   <button
                     onClick={() => copyToClipboard(product.sku)}
                     className="p-1 hover:bg-gray-100 rounded transition-colors"

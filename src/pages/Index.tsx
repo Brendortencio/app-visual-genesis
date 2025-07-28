@@ -29,17 +29,17 @@ const Index = () => {
   }
 
   return (
-    <div className="min-h-screen bg-stone-200">
+    <div className="min-h-screen bg-app-bg">
       {/* Hero Section */}
       <div className="flex flex-col items-center justify-center min-h-screen px-6">
         <div className="text-center mb-16">
           {/* Logo Circle */}
-          <div className="w-32 h-32 bg-stone-300 rounded-full flex items-center justify-center mx-auto mb-8 shadow-lg">
-            <span className="text-6xl font-bold text-black italic">N</span>
+          <div className="w-32 h-32 bg-category-beige rounded-full flex items-center justify-center mx-auto mb-8 shadow-lg">
+            <span className="text-6xl font-bold text-text-primary italic">N</span>
           </div>
           
-          <h1 className="text-5xl font-bold text-black mb-4">SKU Rápido</h1>
-          <p className="text-xl text-black italic mb-8">" Nós Inovamos "</p>
+          <h1 className="text-5xl font-bold text-text-primary mb-4">SKU Rápido</h1>
+          <p className="text-xl text-text-primary italic mb-8">" Nós Inovamos "</p>
           
           {/* Team Photos */}
           <div className="flex justify-center gap-2 mb-4">
@@ -50,8 +50,8 @@ const Index = () => {
           </div>
           
           <div className="flex items-center justify-center gap-2">
-            <span className="text-sm text-black">DESPERTE O QUE HÁ DE MELHOR EM VOCÊ.</span>
-            <div className="w-6 h-6 bg-black flex items-center justify-center">
+            <span className="text-sm text-text-primary">DESPERTE O QUE HÁ DE MELHOR EM VOCÊ.</span>
+            <div className="w-6 h-6 bg-icon-bg flex items-center justify-center">
               <span className="text-white text-xs font-bold italic">N</span>
             </div>
           </div>
@@ -74,12 +74,12 @@ const Index = () => {
               title="Cafés"
               icon={<Coffee className="w-8 h-8 text-white" />}
               onClick={() => handleCategorySelect("cafes")}
-              className="bg-slate-400"
+              isActive={true}
             />
           </div>
           
           <div className="text-center mt-6">
-            <span className="text-black text-lg">scroll ——————→</span>
+            <span className="text-text-primary text-lg">scroll ——————→</span>
           </div>
           
           {/* Scroll indicators */}
